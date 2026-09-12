@@ -100,6 +100,9 @@
   .pubs { list-style: none; margin: 0; padding: 0; }
   .pub-item { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 16px; padding: 23px 0; border-bottom: 1px solid var(--rule); }
   .pub-item:last-child { border-bottom: 0; padding-bottom: 2px; }
+  .pub-overflow { margin-top: 18px; }
+  .pub-overflow summary { width: fit-content; padding: 6px 12px; border-radius: 4px; background: var(--tint); color: var(--link); cursor: pointer; font-size: 13px; }
+  .pub-overflow summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
   .pub-year { padding-top: 1px; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
   .pub-title { margin: 0 0 7px; font-size: 15px; font-weight: 600; line-height: 1.55; overflow-wrap: anywhere; }
   .pub-title a { color: var(--fg); }
@@ -507,6 +510,27 @@
   <p>&copy; <span id="year">2026</span> Hangyu Yu · EPFL</p>
   <p>Layout inspired by <a href="https://github.com/Chasel-Tsui/Homepage">Chang Xu’s homepage</a>.</p>
 </footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.querySelectorAll('#publications > .pubs').forEach(list => {
+  const olderItems = Array.from(list.children).slice(5);
+  if (!olderItems.length) return;
+
+  const details = document.createElement('details');
+  details.className = 'pub-overflow';
+  const summary = document.createElement('summary');
+  const showMore = `Show ${olderItems.length} more`;
+  summary.textContent = showMore;
+  const olderList = document.createElement('ol');
+  olderList.className = 'pubs';
+  olderList.start = 6;
+  olderList.append(...olderItems);
+  details.append(summary, olderList);
+  list.after(details);
+  details.addEventListener('toggle', () => {
+    summary.textContent = details.open ? 'Show less' : showMore;
+  });
+});
+</script>
 </body>
 </html>
