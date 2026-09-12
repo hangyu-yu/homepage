@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hangyu Yu</title>
+<meta name="description" content="Hangyu Yu — postdoctoral researcher at EPFL working on operando diagnosis, optimization and degradation of solid oxide cell technology.">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1b1b1b;
+    --muted: #6b7076;
+    --rule: #e6e6e6;
+    --link: #9b1c2e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #15171a;
+      --fg: #e6e6e6;
+      --muted: #969ba1;
+      --rule: #2b2f34;
+      --link: #e8899a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto;
+    padding: 3rem 1.25rem 4rem;
+    max-width: 46rem;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header { display: flex; gap: 1.6rem; align-items: center; flex-wrap: wrap; }
+  header img {
+    width: 108px; height: 108px;
+    border-radius: 50%; object-fit: cover;
+    border: 1px solid var(--rule);
+  }
+  h1 { font-size: 1.75rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+  .tagline { margin: 0 0 .15rem; }
+  .affil { color: var(--muted); margin: 0 0 .7rem; font-size: .95rem; }
+  .links { font-size: .9rem; margin: 0; }
+  .links a { margin-right: .85rem; white-space: nowrap; }
+
+  h2 {
+    font-size: .82rem; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--muted);
+    margin: 2.6rem 0 .9rem; padding-bottom: .4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  p { margin: 0 0 .9rem; }
+  ul { padding-left: 1.1rem; margin: 0; }
+  li { margin-bottom: .55rem; }
+
+  /* year-prefixed entry lists */
+  .entries { list-style: none; padding: 0; }
+  .entries li {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: .2rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .entries .when { color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
+  .entries .what strong { font-weight: 600; }
+  .entries .note { display: block; color: var(--muted); font-size: .9rem; margin-top: .15rem; }
+  @media (max-width: 32rem) {
+    .entries li { grid-template-columns: 1fr; }
+    .entries .when { order: -1; }
+  }
+
+  .pubs { list-style: none; padding: 0; }
+  .pubs li { margin-bottom: .95rem; font-size: .95rem; }
+  .pubs .me { font-weight: 600; }
+  .pubs .venue { font-style: italic; }
+  .pubs .yr { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+  footer {
+    margin-top: 3.5rem; padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: .85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <!-- Drop photo.jpg next to this file and uncomment:
+  <img src="photo.jpg" alt="Hangyu Yu"> -->
+  <div>
+    <h1>Hangyu Yu</h1>
+    <p class="tagline">Postdoctoral researcher, Group of Energy Materials</p>
+    <p class="affil">&Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne (EPFL), Switzerland</p>
+    <p class="links">
+      <a href="mailto:hangyu.yu@outlook.com">Email</a>
+      <a href="https://scholar.google.com/citations?user=32MVtS0AAAAJ">Google&nbsp;Scholar</a>
+      <a href="https://orcid.org/0000-0003-0856-0320">ORCID</a>
+      <a href="https://github.com/hangyu-yu">GitHub</a>
+      <a href="https://www.linkedin.com/in/hangyu-yu-0057b7101">LinkedIn</a>
+    </p>
+  </div>
+</header>
+
+<section>
+  <h2>About</h2>
+  <p>
+    I work on solid oxide cell technology &mdash; fuel cells and electrolysers &mdash; with a focus on
+    what happens to them while they run. My PhD at EPFL (2021&ndash;2025) covered operando diagnosis,
+    optimization and degradation of these devices; I stayed on as a postdoc in 2025.
+  </p>
+  <p>
+    Most of my work sits between the electrochemistry and the system: impedance spectroscopy and
+    segmented in-situ characterization on one side, real-time optimization and techno-economic
+    analysis of the surrounding energy system on the other. I also develop
+    <strong>EISAP</strong>, a software tool for electrochemical impedance spectroscopy analysis.
+  </p>
+</section>
+
+<section>
+  <h2>Research interests</h2>
+  <ul>
+    <li>Operando characterization of electrochemical devices</li>
+    <li>Degradation of solid oxide cell technology</li>
+    <li>Real-time optimization of energy systems</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <ol class="pubs">
+    <li>
+      Wei, X., Waeber, A., Sharma, S., <span class="me">Yu, H.</span>, Van herle, J., Mar&eacute;chal, F.
+      Scalable modular design of solid oxide fuel cell systems for enhanced large-scale power generation.
+      <span class="venue">Nature Communications</span>, in press, <span class="yr">2026</span>.
+    </li>
+    <li>
+      Aubin, P., <span class="me">Yu, H.</span>, Wang, L., Van herle, J.
+      Identification of key control variables for a methanation unit through system analysis using experimental results.
+      <span class="venue">Applied Energy</span>, 401, p.126689, <span class="yr">2025</span>.
+      <a href="https://doi.org/10.1016/j.apenergy.2025.126689">doi</a>
+    </li>
+    <li>
+      <span class="me">Yu, H.</span>*, Berset, F.B., M&auml;kinen, P., Frantz, C., Aubin, P., et al.
+      Performance assessment and fast diagnosis of a &mu;-CHP solid oxide fuel cell system.
+      <span class="venue">Applied Energy</span>, 397, p.126321, <span class="yr">2025</span>.
+      <a href="https://doi.org/10.1016/j.apenergy.2025.126321">doi</a>
+    </li>
+    <li>
+      <span class="me">Yu, H.</span>, Frantz, C., Savioz, L., Aubin, P., Fronterotta, D., et al.
+      Poisoning and recovery behavior of Ni-GDC based electrolyte-supported solid oxide fuel cell exposed
+      to common sulfur compounds under processed biogas environment.
+      <span class="venue">Journal of Power Sources</span>, 642, p.236901, <span class="yr">2025</span>.
+      <a href="https://doi.org/10.1016/j.jpowsour.2025.236901">doi</a>
+    </li>
+    <li>
+      <span class="me">Yu, H.</span>, Frantz, C., Savioz, L., Fronterotta, D., Aubin, P., et al.
+      Characterization of Ni-GDC based electrolyte-supported cell under processed biogas composition:
+      electrochemical performance, degradation and recovery.
+      <span class="venue">Electrochimica Acta</span>, 526, p.146163, <span class="yr">2025</span>.
+      <a href="https://doi.org/10.1016/j.electacta.2025.146163">doi</a>
+    </li>
+    <li>
+      Wang, L., <span class="me">Yu, H.</span>, Wei, X., Liu, H.
+      Applications &mdash; transportation applications | ships: fuel cells and batteries.
+      In <span class="venue">Encyclopedia of Electrochemical Power Sources</span> (2nd ed.), Elsevier, <span class="yr">2025</span>.
+      <a href="https://doi.org/10.1016/B978-0-323-96022-9.00135-3">doi</a>
+    </li>
+    <li>
+      Ma, C., <span class="me">Yu, H.</span>*, Monticone, G., Ma, S., Van herle, J., et al.
+      Techno-economic evaluation of biogas-fed SOFC systems with novel biogas purification and carbon capture technologies.
+      <span class="venue">Renewable Energy</span>, 235, p.121302, <span class="yr">2024</span>.
+      <a href="https://doi.org/10.1016/j.renene.2024.121302">doi</a>
+    </li>
+    <li>
+      Li, C., Wang, L., Zhang, Y., <span class="me">Yu, H.</span>, Wang, Z., et al.
+      A multi-objective planning method for multi-energy complementary distributed energy system:
+      tackling thermal integration and process synergy.
+      <span class="venue">Journal of Cleaner Production</span>, 390, p.135905, <span class="yr">2023</span>.
+      <a href="https://doi.org/10.1016/j.jclepro.2023.135905">doi</a>
+    </li>
+    <li>
+      Moussaoui, H., Subotić, V., Van herle, J., Wang, L., Wei, X., <span class="me">Yu, H.</span>
+      Stack/system development for high-temperature electrolysis.
+      In <span class="venue">High Temperature Electrolysis</span> (pp. 383&ndash;407), Springer, <span class="yr">2023</span>.
+      <a href="https://doi.org/10.1007/978-3-031-22508-6_12">doi</a>
+    </li>
+    <li>
+      Zhang, H., Xu, C., <span class="me">Yu, H.</span>, Wu, H., Jin, F., et al.
+      Enhancement of methanol steam reforming in a tubular fixed-bed reactor with simultaneous heating inside and outside.
+      <span class="venue">Energy</span>, 254, p.124330, <span class="yr">2022</span>.
+      <a href="https://doi.org/10.1016/j.energy.2022.124330">doi</a>
+    </li>
+    <li>
+      <span class="me">Yu, H.</span>, Li, Y., Xu, C., Jin, F., Ye, F., et al.
+      Distinct facets to enhance the process of hydrogen production via methanol steam reforming &mdash; a review.
+      <span class="venue">Energy Storage and Saving</span>, 1(1), pp.53&ndash;69, <span class="yr">2022</span>.
+      <a href="https://doi.org/10.1016/j.enss.2021.12.001">doi</a>
+    </li>
+    <li>
+      Jin, F., Xu, C., <span class="me">Yu, H.</span>, Xia, X., Ye, F., et al.
+      CaCo<sub>0.05</sub>Mn<sub>0.95</sub>O<sub>3&minus;&delta;</sub>: a promising perovskite solid solution
+      for solar thermochemical energy storage.
+      <span class="venue">ACS Applied Materials &amp; Interfaces</span>, 13(3), pp.3856&ndash;3866, <span class="yr">2021</span>.
+      <a href="https://doi.org/10.1021/acsami.0c18207">doi</a>
+    </li>
+    <li>
+      <span class="me">Yu, H.</span>, Xu, C., Li, Y., Jin, F., Ye, F., et al.
+      Performance enhancement of CuO/ZnO by deposition on the metal-organic framework of Cu-BTC
+      for methanol steam reforming reaction.
+      <span class="venue">ES Energy &amp; Environment</span>, 8(16), pp.65&ndash;77, <span class="yr">2020</span>.
+      <a href="http://dx.doi.org/10.30919/esee8c415">doi</a>
+    </li>
+    <li>
+      Ju, X., Abd El-Samie, M.M., Xu, C., <span class="me">Yu, H.</span>, Pan, X., et al.
+      A fully coupled numerical simulation of a hybrid concentrated photovoltaic/thermal system that employs
+      a Therminol VP-1 based nanofluid as a spectral beam filter.
+      <span class="venue">Applied Energy</span>, 264, p.114701, <span class="yr">2020</span>.
+      <a href="https://doi.org/10.1016/j.apenergy.2020.114701">doi</a>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2>Selected talks</h2>
+  <ul class="entries">
+    <li>
+      <span class="when">Jul 2025</span>
+      <span class="what">Safe and optimal operation of a commercial &mu;-CHP SOFC system under real-world conditions.
+        <span class="note">SOFC-XIX, ECS, Stockholm, Sweden</span></span>
+    </li>
+    <li>
+      <span class="when">Jul 2025</span>
+      <span class="what">State-of-health characterization and fast diagnosis of a commercial &mu;-CHP SOFC under fuel starvation.
+        <span class="note">SOFC-XIX, ECS, Stockholm, Sweden</span></span>
+    </li>
+    <li>
+      <span class="when">Jul 2024</span>
+      <span class="what">Characterization and modelling of SOFC degradation via accelerated life test and design of experiments.
+        <span class="note">EFCF 2024, Lucerne, Switzerland</span></span>
+    </li>
+    <li>
+      <span class="when">Jun 2023</span>
+      <span class="what">Techno-economic feasibility of biogas-fed SOFC power systems integrated with biogas cleaning and carbon capture.
+        <span class="note">SOFC-XVIII, ECS, Boston, United States</span></span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <ul class="entries">
+    <li>
+      <span class="when">2025&ndash;now</span>
+      <span class="what"><strong>Postdoctoral researcher</strong>, EPFL, Switzerland</span>
+    </li>
+    <li>
+      <span class="when">2021&ndash;2025</span>
+      <span class="what"><strong>Teaching assistant</strong>, EPFL, Switzerland
+        <span class="note">Exercise sessions for &ldquo;Engines and fuel cells&rdquo;, &ldquo;Renewable energies&rdquo;
+          and &ldquo;Thermal power cycles and heat pump systems&rdquo;. Supervised 4 semester projects and 4 master theses.</span></span>
+    </li>
+    <li>
+      <span class="when">2024&ndash;2025</span>
+      <span class="what"><strong>GENESYS</strong> (SERI, 25 kCHF) &mdash; general solution for degradation control
+        and performance optimization of solid oxide fuel cells
+        <span class="note">Scientific coordinator, work-package leader, main author of the proposal.</span></span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <ul class="entries">
+    <li>
+      <span class="when">2021&ndash;2025</span>
+      <span class="what"><strong>PhD in Energy</strong>, EPFL, Switzerland
+        <span class="note">Operando diagnosis, optimization and degradation of solid oxide fuel cell technology.
+          Supervisors: Prof. Jan Van herle, Prof. Gr&eacute;gory Fran&ccedil;ois.</span></span>
+    </li>
+    <li>
+      <span class="when">2018&ndash;2021</span>
+      <span class="what"><strong>MSc in Power Engineering and Engineering Thermophysics</strong>,
+        North China Electric Power University
+        <span class="note">Performance enhancement of thermochemical hydrogen generation based on
+          methanol steam reforming. Supervisor: Prof. Chao Xu.</span></span>
+    </li>
+    <li>
+      <span class="when">2014&ndash;2018</span>
+      <span class="what"><strong>BSc in Energy and Power Engineering</strong>,
+        North China Electric Power University
+        <span class="note">Construction and experimental study of a thermochemical hydrogen generation platform.
+          Supervisor: Prof. Chao Xu.</span></span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Awards</h2>
+  <ul class="entries">
+    <li>
+      <span class="when">2025</span>
+      <span class="what"><strong>Gold Medal</strong>, Geneva International Exhibition of Inventions
+        <span class="note">For segmented in-situ electrochemical and thermal characterization of solid oxide cells.</span></span>
+    </li>
+    <li>
+      <span class="when">2021</span>
+      <span class="what">Chinese Government Scholarship for PhD studies</span>
+    </li>
+    <li>
+      <span class="when">2020</span>
+      <span class="what">First-class Academic Scholarship, NCEPU</span>
+    </li>
+    <li>
+      <span class="when">2017</span>
+      <span class="what">First Prize, North China Division, TIIC National Undergraduate IoT Design Contest</span>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <ul class="entries">
+    <li><span class="when">Experiment</span><span class="what">Electrochemical impedance spectroscopy, solid oxide cell testing,
+      gas chromatography, SEM, XRD, Auger electron spectroscopy, energy system construction</span></li>
+    <li><span class="when">Modelling</span><span class="what">Energy device modelling, techno-economic analysis,
+      optimization theory, software development</span></li>
+    <li><span class="when">Code</span><span class="what">Python, C++, Lua, MATLAB, LaTeX</span></li>
+    <li><span class="when">Languages</span><span class="what">Chinese (native), English (C1/C2), French (B1)</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>Contact</h2>
+  <p>
+    <a href="mailto:hangyu.yu@outlook.com">hangyu.yu@outlook.com</a><br>
+    Group of Energy Materials, EPFL Valais Wallis, Sion, Switzerland
+  </p>
+</section>
+
+<footer>
+  &copy; <span id="year">2026</span> Hangyu Yu
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
