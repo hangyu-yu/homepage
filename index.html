@@ -3,110 +3,164 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hangyu Yu</title>
+<title>Hangyu Yu | EPFL</title>
 <meta name="description" content="Hangyu Yu — postdoctoral researcher at EPFL working on operando diagnosis, optimization and degradation of solid oxide cell technology.">
 <style>
   :root {
-    --bg: #ffffff;
-    --fg: #1b1b1b;
-    --muted: #6b7076;
-    --rule: #e6e6e6;
-    --link: #9b1c2e;
+    color-scheme: light;
+    --bg: #f8fafc;
+    --surface: #ffffff;
+    --fg: #202938;
+    --muted: #606d80;
+    --rule: #e5eaf1;
+    --link: #2458c5;
+    --tint: #edf3ff;
+    --shadow: 0 2px 8px rgb(24 44 76 / 4%);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #15171a;
-      --fg: #e6e6e6;
-      --muted: #969ba1;
-      --rule: #2b2f34;
-      --link: #e8899a;
+      color-scheme: dark;
+      --bg: #121720;
+      --surface: #1b2330;
+      --fg: #ecf0f7;
+      --muted: #b0bbcd;
+      --rule: #354155;
+      --link: #9abcff;
+      --tint: #253654;
+      --shadow: none;
     }
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 88px; }
   body {
-    margin: 0 auto;
-    padding: 3rem 1.25rem 4rem;
-    max-width: 46rem;
+    margin: 0;
     background: var(--bg);
     color: var(--fg);
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font: 15px/1.75 -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
   }
-  a { color: var(--link); text-decoration: none; }
+  a { color: var(--link); text-decoration: none; text-underline-offset: 3px; }
   a:hover { text-decoration: underline; }
-
-  header { display: flex; gap: 1.6rem; align-items: center; flex-wrap: wrap; }
-  header img {
-    width: 108px; height: 108px;
-    border-radius: 50%; object-fit: cover;
-    border: 1px solid var(--rule);
+  a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 3px; }
+  p { margin: 0 0 14px; }
+  .skip-link {
+    position: fixed; top: -80px; left: 16px; z-index: 20;
+    padding: 8px 16px; background: var(--surface);
   }
-  h1 { font-size: 1.75rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
-  .tagline { margin: 0 0 .15rem; }
-  .affil { color: var(--muted); margin: 0 0 .7rem; font-size: .95rem; }
-  .links { font-size: .9rem; margin: 0; }
-  .links a { margin-right: .85rem; white-space: nowrap; }
-
+  .skip-link:focus { top: 8px; }
+  .site-nav { position: sticky; top: 0; z-index: 10; background: var(--surface); border-bottom: 1px solid var(--rule); }
+  .nav-inner {
+    max-width: 960px; min-height: 64px; margin: auto; padding: 12px 24px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  }
+  .nav-brand { font-size: 17px; font-weight: 700; color: var(--fg); white-space: nowrap; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 0; list-style: none; }
+  .nav-links a { color: var(--muted); font-size: 13px; font-weight: 500; padding: 8px 0; }
+  .nav-links a:hover { color: var(--link); }
+  main { max-width: 960px; margin: 32px auto 0; padding: 0 24px; }
+  section {
+    margin-bottom: 24px; padding: 30px 34px;
+    background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 10px; box-shadow: var(--shadow);
+  }
+  #about { display: flow-root; padding-top: 36px; }
+  .profile-photo {
+    float: right; width: 144px; height: 144px; margin: 0 0 20px 28px;
+    border-radius: 50%; object-fit: cover; object-position: center 35%;
+    border: 3px solid var(--rule);
+  }
+  .profile-label { color: var(--link); font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 6px; }
+  h1 { font-size: 34px; line-height: 1.2; margin: 0 0 10px; letter-spacing: -.025em; }
+  .tagline { margin-bottom: 2px; font-weight: 500; }
+  .affil { color: var(--muted); margin-bottom: 22px; font-size: 14px; }
+  .profile-bio { max-width: 76ch; }
+  .profile-links { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0; }
+  .profile-links a, .publication-nav a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--tint); color: var(--link); border-radius: 6px;
+    padding: 7px 12px; font-size: 12px; font-weight: 600;
+  }
+  .profile-links a:hover, .publication-nav a:hover { box-shadow: inset 0 0 0 1px var(--link); text-decoration: none; }
+  .research-label { margin: 25px 0 10px; color: var(--muted); font-size: 12px; font-weight: 600; }
+  .research-interests { display: flex; flex-wrap: wrap; gap: 7px 18px; margin: 0; padding: 0; list-style: none; }
+  .research-interests li { font-size: 12px; color: var(--muted); }
+  .research-interests li::before { content: "·"; color: var(--link); margin-right: 7px; font-weight: 700; }
   h2 {
-    font-size: .82rem; text-transform: uppercase; letter-spacing: .1em;
-    color: var(--muted);
-    margin: 2.6rem 0 .9rem; padding-bottom: .4rem;
-    border-bottom: 1px solid var(--rule);
+    display: table; margin: 0 0 22px; padding-bottom: 7px;
+    border-bottom: 2px solid var(--link); font-size: 19px; line-height: 1.4;
   }
-  p { margin: 0 0 .9rem; }
-  ul { padding-left: 1.1rem; margin: 0; }
-  li { margin-bottom: .55rem; }
-
-  /* year-prefixed entry lists */
-  .entries { list-style: none; padding: 0; }
-  .entries li {
-    display: grid;
-    grid-template-columns: 6.5rem 1fr;
-    gap: .2rem 1rem;
-    margin-bottom: 1rem;
+  .publication-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+  .publication-nav span { opacity: .8; font-variant-numeric: tabular-nums; }
+  .category-title {
+    display: flex; align-items: center; gap: 10px;
+    margin: 30px 0 0; padding-bottom: 12px; border-bottom: 1px solid var(--rule);
+    color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
   }
-  .entries .when { color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; }
-  .entries .what strong { font-weight: 600; }
-  .entries .note { display: block; color: var(--muted); font-size: .9rem; margin-top: .15rem; }
-  @media (max-width: 32rem) {
-    .entries li { grid-template-columns: 1fr; }
-    .entries .when { order: -1; }
+  .category-title span { background: var(--tint); color: var(--link); padding: 1px 7px; border-radius: 4px; letter-spacing: 0; }
+  .pubs { list-style: none; margin: 0; padding: 0; }
+  .pub-item { display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 16px; padding: 23px 0; border-bottom: 1px solid var(--rule); }
+  .pub-item:last-child { border-bottom: 0; padding-bottom: 2px; }
+  .pub-year { padding-top: 1px; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .pub-title { margin: 0 0 7px; font-size: 15px; font-weight: 600; line-height: 1.55; overflow-wrap: anywhere; }
+  .pub-title a { color: var(--fg); }
+  .pub-title a:hover { color: var(--link); }
+  .pub-authors { margin: 0 0 6px; color: var(--muted); font-size: 12px; line-height: 1.75; }
+  .pub-authors strong { color: var(--fg); font-weight: 600; }
+  .pub-venue { margin: 0 0 8px; color: var(--muted); font-size: 12px; font-style: italic; }
+  .pub-note { margin: 0 0 9px; color: var(--muted); font-size: 12px; }
+  .paper-link { display: inline-block; border: 1px solid var(--rule); background: var(--tint); padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 500; }
+  .paper-link:hover { border-color: var(--link); text-decoration: none; }
+  .paper-link span { margin-left: 4px; }
+  .entries { list-style: none; padding: 0; margin: 0; }
+  .entries li { display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: 14px; }
+  .entries li:first-child { padding-top: 0; }
+  .entries li:last-child { padding-bottom: 0; border-bottom: 0; }
+  .when { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .what strong { font-weight: 600; }
+  .note { display: block; color: var(--muted); font-size: 12px; margin-top: 4px; }
+  #contact p { margin-bottom: 0; font-size: 14px; }
+  footer { max-width: 960px; margin: 32px auto; padding: 0 24px; text-align: center; color: var(--muted); font-size: 12px; }
+  footer p { margin-bottom: 4px; }
+  footer a { color: var(--muted); }
+  @media (max-width: 700px) {
+    html { scroll-padding-top: 118px; }
+    .nav-inner { flex-direction: column; align-items: flex-start; gap: 4px; padding: 10px 20px; }
+    .nav-links { gap: 4px 17px; }
+    .nav-links a { font-size: 12px; }
+    main { margin-top: 20px; padding: 0 16px; }
+    section { padding: 24px 20px; margin-bottom: 18px; }
+    #about { padding-top: 28px; }
+    .profile-photo { float: none; display: block; width: 112px; height: 112px; margin: 0 0 20px; }
+    h1 { font-size: 30px; }
+    .pub-item { grid-template-columns: 1fr; gap: 5px; padding: 21px 0; }
+    .entries li { grid-template-columns: 1fr; gap: 3px; }
   }
-
-  .pubs { list-style: none; padding: 0; }
-  .pubs li { margin-bottom: .95rem; font-size: .95rem; }
-  .pubs .me { font-weight: 600; }
-  .pubs .venue { font-style: italic; }
-  .pubs .yr { color: var(--muted); font-variant-numeric: tabular-nums; }
-
-  footer {
-    margin-top: 3.5rem; padding-top: 1rem;
-    border-top: 1px solid var(--rule);
-    color: var(--muted); font-size: .85rem;
-  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 </style>
 </head>
 <body>
-
-<header>
-  <!-- Drop photo.jpg next to this file and uncomment:
-  <img src="photo.jpg" alt="Hangyu Yu"> -->
-  <div>
-    <h1>Hangyu Yu</h1>
-    <p class="tagline">Postdoctoral researcher, Group of Energy Materials</p>
-    <p class="affil">&Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne (EPFL), Switzerland</p>
-    <p class="links">
-      <a href="mailto:hangyu.yu@outlook.com">Email</a>
-      <a href="https://scholar.google.com/citations?user=32MVtS0AAAAJ">Google&nbsp;Scholar</a>
-      <a href="https://orcid.org/0000-0003-0856-0320">ORCID</a>
-      <a href="https://github.com/hangyu-yu">GitHub</a>
-      <a href="https://www.linkedin.com/in/hangyu-yu-0057b7101">LinkedIn</a>
-    </p>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#about">Hangyu Yu</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#awards">Awards</a></li>
+    </ul>
   </div>
-</header>
+</nav>
 
-<section>
-  <h2>About</h2>
+<main id="main">
+<section id="about">
+  <img class="profile-photo" src="docs/Photo.png" alt="Portrait of Hangyu Yu" width="144" height="144">
+  <p class="profile-label">Energy materials &amp; systems</p>
+  <h1>Hangyu Yu</h1>
+  <p class="tagline">Postdoctoral researcher · Group of Energy Materials</p>
+  <p class="affil">&Eacute;cole Polytechnique F&eacute;d&eacute;rale de Lausanne (EPFL), Switzerland</p>
+  <div class="profile-bio">
   <p>
     I work on solid oxide cell technology &mdash; fuel cells and electrolysers &mdash; with a focus on
     what happens to them while they run. My PhD at EPFL (2021&ndash;2025) covered operando diagnosis,
@@ -118,139 +172,246 @@
     analysis of the surrounding energy system on the other. I also develop
     <strong>EISAP</strong>, a software tool for electrochemical impedance spectroscopy analysis.
   </p>
-</section>
-
-<section>
-  <h2>Research interests</h2>
-  <ul>
+  </div>
+  <div class="profile-links">
+      <a href="mailto:hangyu.yu@outlook.com">Email</a>
+      <a href="https://scholar.google.com/citations?user=32MVtS0AAAAJ">Google&nbsp;Scholar</a>
+      <a href="https://orcid.org/0000-0003-0856-0320">ORCID</a>
+      <a href="https://github.com/hangyu-yu">GitHub</a>
+      <a href="https://www.linkedin.com/in/hangyu-yu-0057b7101">LinkedIn</a>
+  </div>
+  <p class="research-label">Research interests</p>
+  <ul class="research-interests">
     <li>Operando characterization of electrochemical devices</li>
     <li>Degradation of solid oxide cell technology</li>
     <li>Real-time optimization of energy systems</li>
   </ul>
 </section>
 
-<section>
+<section id="publications">
   <h2>Publications</h2>
+  <nav class="publication-nav" aria-label="Publication categories">
+    <a href="#journals">Journal articles <span>16</span></a>
+    <a href="#books">Book chapters <span>2</span></a>
+    <a href="#conferences">Conferences <span>4</span></a>
+  </nav>
+
+  <h3 id="journals" class="category-title">Journal articles <span>16</span></h3>
   <ol class="pubs">
-    <li>
-      Wei, X., Waeber, A., Sharma, S., <span class="me">Yu, H.</span>, Van herle, J., Mar&eacute;chal, F.
-      Scalable modular design of solid oxide fuel cell systems for enhanced large-scale power generation.
-      <span class="venue">Nature Communications</span>, in press, <span class="yr">2026</span>.
+    <li class="pub-item">
+      <span class="pub-year">2026</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.jpowsour.2026.241255">Dimethyl sulphide poisoning of a Ni-anode SOFC stack: concentration dependence and reversibility</a></h4>
+        <p class="pub-authors">Lucia Pera, Audrey Wesoly, Stefan Diethelm, Cédric Frantz, <strong>Hangyu Yu</strong>, Marta Gandiglio, Paolo Marocco, Massimo Santarelli, Jan Van Herle</p>
+        <p class="pub-venue">Journal of Power Sources 694, 241255 · 2026</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.jpowsour.2026.241255">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      Aubin, P., <span class="me">Yu, H.</span>, Wang, L., Van herle, J.
-      Identification of key control variables for a methanation unit through system analysis using experimental results.
-      <span class="venue">Applied Energy</span>, 401, p.126689, <span class="yr">2025</span>.
-      <a href="https://doi.org/10.1016/j.apenergy.2025.126689">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2026</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.xcrp.2026.103490">Performance optimization of a solid oxide fuel cell system for long-term operation</a></h4>
+        <p class="pub-authors">Dante Fronterotta, <strong>Hangyu Yu</strong>, Florian Bernard Berset, Guillaume Jeanmonod, Chengzhou Li, Arne Sommerfeld, Gregor Holstermann, Massimo Santarelli, Ligang Wang, Grégory François, Jan Van Herle</p>
+        <p class="pub-venue">Cell Reports Physical Science 7(8), 103490 · 2026</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.xcrp.2026.103490">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      <span class="me">Yu, H.</span>*, Berset, F.B., M&auml;kinen, P., Frantz, C., Aubin, P., et al.
-      Performance assessment and fast diagnosis of a &mu;-CHP solid oxide fuel cell system.
-      <span class="venue">Applied Energy</span>, 397, p.126321, <span class="yr">2025</span>.
-      <a href="https://doi.org/10.1016/j.apenergy.2025.126321">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2026</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.apenergy.2026.127941">Parametric study of Ni-GDC based electrolyte-supported cell via electrochemical impedance spectroscopy</a></h4>
+        <p class="pub-authors"><strong>Hangyu Yu</strong>, Cédric Frantz, Louis Savioz, Dante Fronterotta, Philippe Aubin, Christian Geipel, Hamza Moussaoui, Guillaume Jeanmonod, Ligang Wang, Jan Van herle</p>
+        <p class="pub-venue">Applied Energy 415, 127941 · 2026</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.apenergy.2026.127941">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      <span class="me">Yu, H.</span>, Frantz, C., Savioz, L., Aubin, P., Fronterotta, D., et al.
-      Poisoning and recovery behavior of Ni-GDC based electrolyte-supported solid oxide fuel cell exposed
-      to common sulfur compounds under processed biogas environment.
-      <span class="venue">Journal of Power Sources</span>, 642, p.236901, <span class="yr">2025</span>.
-      <a href="https://doi.org/10.1016/j.jpowsour.2025.236901">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2026</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1149/1945-7111/ae4f2b">Carbon Deposition Induced Short Circuit of YSZ Electrolyte in Solid Oxide CO₂ Electrolysis</a></h4>
+        <p class="pub-authors">Jingjing Liang, <strong>Hangyu Yu</strong>, Ye Huang, Minfang Han, Jan Van herle</p>
+        <p class="pub-venue">Journal of The Electrochemical Society 173(6), 064504 · 2026</p>
+        <a class="paper-link" href="https://doi.org/10.1149/1945-7111/ae4f2b">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      <span class="me">Yu, H.</span>, Frantz, C., Savioz, L., Fronterotta, D., Aubin, P., et al.
-      Characterization of Ni-GDC based electrolyte-supported cell under processed biogas composition:
-      electrochemical performance, degradation and recovery.
-      <span class="venue">Electrochimica Acta</span>, 526, p.146163, <span class="yr">2025</span>.
-      <a href="https://doi.org/10.1016/j.electacta.2025.146163">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2026</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1038/s41467-026-69110-y">Scalable modular design of solid oxide fuel cell systems for enhanced large-scale power generation</a></h4>
+        <p class="pub-authors">Xinyi Wei, Arthur Waeber, Shivom Sharma, <strong>Hangyu Yu</strong>, Jan Van herle, François Maréchal</p>
+        <p class="pub-venue">Nature Communications 17(1), 2421 · 2026</p>
+        <a class="paper-link" href="https://doi.org/10.1038/s41467-026-69110-y">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      Wang, L., <span class="me">Yu, H.</span>, Wei, X., Liu, H.
-      Applications &mdash; transportation applications | ships: fuel cells and batteries.
-      In <span class="venue">Encyclopedia of Electrochemical Power Sources</span> (2nd ed.), Elsevier, <span class="yr">2025</span>.
-      <a href="https://doi.org/10.1016/B978-0-323-96022-9.00135-3">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2025</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.apenergy.2025.126689">Identification of key control variables for a methanation unit through system analysis using experimental results</a></h4>
+        <p class="pub-authors">Philippe Aubin, <strong>Hangyu Yu</strong>, Ligang Wang, Jan Van herle</p>
+        <p class="pub-venue">Applied Energy 401, 126689 · 2025</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.apenergy.2025.126689">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      Ma, C., <span class="me">Yu, H.</span>*, Monticone, G., Ma, S., Van herle, J., et al.
-      Techno-economic evaluation of biogas-fed SOFC systems with novel biogas purification and carbon capture technologies.
-      <span class="venue">Renewable Energy</span>, 235, p.121302, <span class="yr">2024</span>.
-      <a href="https://doi.org/10.1016/j.renene.2024.121302">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2025</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.apenergy.2025.126321">Performance assessment and fast diagnosis of a μ-CHP solid oxide fuel cell system</a></h4>
+        <p class="pub-authors"><strong>Hangyu Yu</strong>, Florian Bernard Berset, Pyry Mäkinen, Cédric Frantz, Philippe Aubin, Arne Sommerfeld, Gregor Holstermann, Tafarel de Avila Ferreira, Hamza Moussaoui, Guillaume Jeanmonod, Ligang Wang, Matthias Boltze, Grégory François, Jan Van herle</p>
+        <p class="pub-venue">Applied Energy 397, 126321 · 2025</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.apenergy.2025.126321">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      Li, C., Wang, L., Zhang, Y., <span class="me">Yu, H.</span>, Wang, Z., et al.
-      A multi-objective planning method for multi-energy complementary distributed energy system:
-      tackling thermal integration and process synergy.
-      <span class="venue">Journal of Cleaner Production</span>, 390, p.135905, <span class="yr">2023</span>.
-      <a href="https://doi.org/10.1016/j.jclepro.2023.135905">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2025</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.jpowsour.2025.236901">Poisoning and recovery behavior of Ni-GDC based electrolyte-supported solid oxide fuel cell exposed to common sulfur compounds under processed biogas environment</a></h4>
+        <p class="pub-authors"><strong>Hangyu Yu</strong>, Cédric Frantz, Louis Savioz, Philippe Aubin, Dante Fronterotta, Christian Geipel, Hamza Moussaoui, Guillaume Jeanmonod, Ligang Wang, Jan Van herle</p>
+        <p class="pub-venue">Journal of Power Sources 642, 236901 · 2025</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.jpowsour.2025.236901">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      Moussaoui, H., Subotić, V., Van herle, J., Wang, L., Wei, X., <span class="me">Yu, H.</span>
-      Stack/system development for high-temperature electrolysis.
-      In <span class="venue">High Temperature Electrolysis</span> (pp. 383&ndash;407), Springer, <span class="yr">2023</span>.
-      <a href="https://doi.org/10.1007/978-3-031-22508-6_12">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2025</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.electacta.2025.146163">Characterization of Ni-GDC based electrolyte-supported cell under processed biogas composition: Electrochemical performance, degradation and recovery</a></h4>
+        <p class="pub-authors"><strong>Hangyu Yu</strong>, Cédric Frantz, Louis Savioz, Dante Fronterotta, Philippe Aubin, Christian Geipel, Hamza Moussaoui, Guillaume Jeanmonod, Ligang Wang, Jan Van herle</p>
+        <p class="pub-venue">Electrochimica Acta 526, 146163 · 2025</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.electacta.2025.146163">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      Zhang, H., Xu, C., <span class="me">Yu, H.</span>, Wu, H., Jin, F., et al.
-      Enhancement of methanol steam reforming in a tubular fixed-bed reactor with simultaneous heating inside and outside.
-      <span class="venue">Energy</span>, 254, p.124330, <span class="yr">2022</span>.
-      <a href="https://doi.org/10.1016/j.energy.2022.124330">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2024</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.renene.2024.121302">Techno-economic evaluation of biogas-fed SOFC systems with novel biogas purification and carbon capture technologies</a></h4>
+        <p class="pub-authors">Chun Ma, <strong>Hangyu Yu</strong>, Gianluca Monticone, Shuai Ma, Jan Van herle, Ligang Wang</p>
+        <p class="pub-venue">Renewable Energy 235, 121302 · 2024</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.renene.2024.121302">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      <span class="me">Yu, H.</span>, Li, Y., Xu, C., Jin, F., Ye, F., et al.
-      Distinct facets to enhance the process of hydrogen production via methanol steam reforming &mdash; a review.
-      <span class="venue">Energy Storage and Saving</span>, 1(1), pp.53&ndash;69, <span class="yr">2022</span>.
-      <a href="https://doi.org/10.1016/j.enss.2021.12.001">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2023</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.jclepro.2023.135905">A multi-objective planning method for multi-energy complementary distributed energy system: Tackling thermal integration and process synergy</a></h4>
+        <p class="pub-authors">Chengzhou Li, Ligang Wang, Yumeng Zhang, <strong>Hangyu Yu</strong>, Zhuo Wang, Liang Li, Ningling Wang, Zhiping Yang, François Maréchal, Yongping Yang</p>
+        <p class="pub-venue">Journal of Cleaner Production 390, 135905 · 2023</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.jclepro.2023.135905">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      Jin, F., Xu, C., <span class="me">Yu, H.</span>, Xia, X., Ye, F., et al.
-      CaCo<sub>0.05</sub>Mn<sub>0.95</sub>O<sub>3&minus;&delta;</sub>: a promising perovskite solid solution
-      for solar thermochemical energy storage.
-      <span class="venue">ACS Applied Materials &amp; Interfaces</span>, 13(3), pp.3856&ndash;3866, <span class="yr">2021</span>.
-      <a href="https://doi.org/10.1021/acsami.0c18207">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2022</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.energy.2022.124330">Enhancement of methanol steam reforming in a tubular fixed-bed reactor with simultaneous heating inside and outside</a></h4>
+        <p class="pub-authors">Huajing Zhang, Chao Xu, <strong>Hangyu Yu</strong>, Hao Wu, Fei Jin, Feng Xiao, Zhirong Liao</p>
+        <p class="pub-venue">Energy 254, 124330 · 2022</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.energy.2022.124330">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      <span class="me">Yu, H.</span>, Xu, C., Li, Y., Jin, F., Ye, F., et al.
-      Performance enhancement of CuO/ZnO by deposition on the metal-organic framework of Cu-BTC
-      for methanol steam reforming reaction.
-      <span class="venue">ES Energy &amp; Environment</span>, 8(16), pp.65&ndash;77, <span class="yr">2020</span>.
-      <a href="http://dx.doi.org/10.30919/esee8c415">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2022</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.enss.2021.12.001">Distinct facets to enhance the process of hydrogen production via methanol steam reforming — a review</a></h4>
+        <p class="pub-authors"><strong>Hangyu Yu</strong>, Yuanzhi Li, Chao Xu, Fei Jin, Feng Ye, Xin Li</p>
+        <p class="pub-venue">Energy Storage and Saving 1(1), 53–69 · 2022</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.enss.2021.12.001">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
-    <li>
-      Ju, X., Abd El-Samie, M.M., Xu, C., <span class="me">Yu, H.</span>, Pan, X., et al.
-      A fully coupled numerical simulation of a hybrid concentrated photovoltaic/thermal system that employs
-      a Therminol VP-1 based nanofluid as a spectral beam filter.
-      <span class="venue">Applied Energy</span>, 264, p.114701, <span class="yr">2020</span>.
-      <a href="https://doi.org/10.1016/j.apenergy.2020.114701">doi</a>
+    <li class="pub-item">
+      <span class="pub-year">2021</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1021/acsami.0c18207">CaCo<sub>0.05</sub>Mn<sub>0.95</sub>O<sub>3−δ</sub>: A promising perovskite solid solution for solar thermochemical energy storage</a></h4>
+        <p class="pub-authors">Fei Jin, Chao Xu, <strong>Hangyu Yu</strong>, Xin Xia, Feng Ye, Xin Li, Xiaoze Du, Yongping Yang</p>
+        <p class="pub-venue">ACS Applied Materials &amp; Interfaces 13(3), 3856–3866 · 2021</p>
+        <a class="paper-link" href="https://doi.org/10.1021/acsami.0c18207">Paper <span aria-hidden="true">↗</span></a>
+      </div>
+    </li>
+    <li class="pub-item">
+      <span class="pub-year">2020</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/j.apenergy.2020.114701">A fully coupled numerical simulation of a hybrid concentrated photovoltaic/thermal system that employs a therminol VP-1 based nanofluid as a spectral beam filter</a></h4>
+        <p class="pub-authors">Xing Ju, Mostafa M. Abd El-Samie, Chao Xu, <strong>Hangyu Yu</strong>, Xinyu Pan, Yongping Yang</p>
+        <p class="pub-venue">Applied Energy 264, 114701 · 2020</p>
+        <a class="paper-link" href="https://doi.org/10.1016/j.apenergy.2020.114701">Paper <span aria-hidden="true">↗</span></a>
+      </div>
+    </li>
+    <li class="pub-item">
+      <span class="pub-year">2020</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.30919/esee8c415">Performance Enhancement of CuO/ZnO by Deposition on the Metal-Organic Framework of Cu-BTC for Methanol Steam Reforming Reaction</a></h4>
+        <p class="pub-authors"><strong>Hangyu Yu</strong>, Chao Xu, Yuanzhi Li, Fei Jin, Feng Ye, Xin Li</p>
+        <p class="pub-venue">ES Energy &amp; Environment 8, 65–77 · 2020</p>
+        <a class="paper-link" href="https://doi.org/10.30919/esee8c415">Paper <span aria-hidden="true">↗</span></a>
+      </div>
+    </li>
+  </ol>
+
+  <h3 id="books" class="category-title">Book chapters <span>2</span></h3>
+  <ol class="pubs">
+    <li class="pub-item">
+      <span class="pub-year">2025</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1016/b978-0-323-96022-9.00135-3">Applications – Transportation Applications | Ships - Fuel Cells and Batteries</a></h4>
+        <p class="pub-authors">Ligang Wang, <strong>Hangyu Yu</strong>, Xinyi Wei, Hua Liu</p>
+        <p class="pub-venue">Encyclopedia of Electrochemical Power Sources · 2nd edition · Elsevier, 280–300 · 2025</p>
+        <a class="paper-link" href="https://doi.org/10.1016/b978-0-323-96022-9.00135-3">Chapter <span aria-hidden="true">↗</span></a>
+      </div>
+    </li>
+    <li class="pub-item">
+      <span class="pub-year">2023</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1007/978-3-031-22508-6_12">Stack/System Development for High-Temperature Electrolysis</a></h4>
+        <p class="pub-authors">Hamza Moussaoui, Vanja Subotić, Jan Van herle, Ligang Wang, Xinyi Wei, <strong>Hangyu Yu</strong></p>
+        <p class="pub-venue">High Temperature Electrolysis · Springer, 383–407 · 2023</p>
+        <a class="paper-link" href="https://doi.org/10.1007/978-3-031-22508-6_12">Chapter <span aria-hidden="true">↗</span></a>
+      </div>
+    </li>
+  </ol>
+
+  <h3 id="conferences" class="category-title">Conferences <span>4</span></h3>
+  <ol class="pubs">
+    <li class="pub-item">
+      <span class="pub-year">2025</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1149/ma2025-031204mtgabs">Safe and Optimal Operation of Commercial μ-CHP SOFC System Under Real-World Condition</a></h4>
+        <p class="pub-authors"><strong>Hangyu Yu</strong>, Florian Bernard Berset, Tafarel de Avila Ferreira, Arne Sommerfeld, Gregor Golstermann, Cedric Frantz, Ligang Wang, Matthias Boltze, Grégory François, Jan Van herle</p>
+        <p class="pub-venue">ECS Meeting Abstracts MA2025-03(1), 204–204 · 2025</p>
+        <p class="pub-note">SOFC-XIX · Stockholm, Sweden · July 2025 · Meeting abstract</p>
+        <a class="paper-link" href="https://doi.org/10.1149/ma2025-031204mtgabs">Abstract <span aria-hidden="true">↗</span></a>
+      </div>
+    </li>
+    <li class="pub-item">
+      <span class="pub-year">2025</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1149/ma2025-031257mtgabs">State-of-Health Characterization and Fast Diagnosis of Commercial μ-CHP SOFC Under Fuel Starvation Condition</a></h4>
+        <p class="pub-authors"><strong>Hangyu Yu</strong>, Florian Bernard Berset, Arne Sommerfeld, Gregor Golstermann, Cedric Frantz, Philippe Aubin, Hamza Moussaoui, Ligang Wang, Matthias Boltze, Jan Van herle</p>
+        <p class="pub-venue">ECS Meeting Abstracts MA2025-03(1), 257–257 · 2025</p>
+        <p class="pub-note">SOFC-XIX · Stockholm, Sweden · July 2025 · Meeting abstract</p>
+        <a class="paper-link" href="https://doi.org/10.1149/ma2025-031257mtgabs">Abstract <span aria-hidden="true">↗</span></a>
+      </div>
+    </li>
+    <li class="pub-item">
+      <span class="pub-year">2024</span>
+      <div>
+        <h4 class="pub-title"><a href="https://www.efcf.com/fileadmin/user_upload/EFCF-2024_16th_SOFC-SOE-Forum_2024_2-5July-FinAnnounc-Progr_all.pdf">Characterization and modelling of SOFC degradation via accelerated life test and design of experiments method</a></h4>
+        <p class="pub-authors">Guillaume Jeanmonod, <strong>Hangyu Yu</strong>, Marie-Lise Tremblay, Cédric Frantz, Jean-François Labrecque, Sylvio Savoie, Jan Van herle</p>
+        <p class="pub-venue">EFCF 2024 · Lucerne, Switzerland · July 2024</p>
+        <p class="pub-note">Conference presentation · Programme entry B1302</p>
+        <a class="paper-link" href="https://www.efcf.com/fileadmin/user_upload/EFCF-2024_16th_SOFC-SOE-Forum_2024_2-5July-FinAnnounc-Progr_all.pdf">Programme (PDF) <span aria-hidden="true">↗</span></a>
+      </div>
+    </li>
+    <li class="pub-item">
+      <span class="pub-year">2023</span>
+      <div>
+        <h4 class="pub-title"><a href="https://doi.org/10.1149/11106.2037ecst">Waste2Watts: Techno-Economic Feasibility of Biogas-Fed SOFC Power System Integrated with Biogas Cleaning Unit and Carbon Capture Technologies</a></h4>
+        <p class="pub-authors"><strong>Hangyu Yu</strong>, Ligang Wang, Jan Van herle, Eduardo Antonio Pina</p>
+        <p class="pub-venue">ECS Transactions 111(6), 2037–2047 · 2023</p>
+        <p class="pub-note">SOFC-XVIII · Boston, United States · 2023 · Conference paper</p>
+        <a class="paper-link" href="https://doi.org/10.1149/11106.2037ecst">Paper <span aria-hidden="true">↗</span></a>
+      </div>
     </li>
   </ol>
 </section>
 
-<section>
-  <h2>Selected talks</h2>
-  <ul class="entries">
-    <li>
-      <span class="when">Jul 2025</span>
-      <span class="what">Safe and optimal operation of a commercial &mu;-CHP SOFC system under real-world conditions.
-        <span class="note">SOFC-XIX, ECS, Stockholm, Sweden</span></span>
-    </li>
-    <li>
-      <span class="when">Jul 2025</span>
-      <span class="what">State-of-health characterization and fast diagnosis of a commercial &mu;-CHP SOFC under fuel starvation.
-        <span class="note">SOFC-XIX, ECS, Stockholm, Sweden</span></span>
-    </li>
-    <li>
-      <span class="when">Jul 2024</span>
-      <span class="what">Characterization and modelling of SOFC degradation via accelerated life test and design of experiments.
-        <span class="note">EFCF 2024, Lucerne, Switzerland</span></span>
-    </li>
-    <li>
-      <span class="when">Jun 2023</span>
-      <span class="what">Techno-economic feasibility of biogas-fed SOFC power systems integrated with biogas cleaning and carbon capture.
-        <span class="note">SOFC-XVIII, ECS, Boston, United States</span></span>
-    </li>
-  </ul>
-</section>
-
-<section>
+<section id="experience">
   <h2>Experience</h2>
   <ul class="entries">
     <li>
@@ -272,7 +433,7 @@
   </ul>
 </section>
 
-<section>
+<section id="education">
   <h2>Education</h2>
   <ul class="entries">
     <li>
@@ -298,7 +459,7 @@
   </ul>
 </section>
 
-<section>
+<section id="awards">
   <h2>Awards</h2>
   <ul class="entries">
     <li>
@@ -321,7 +482,7 @@
   </ul>
 </section>
 
-<section>
+<section id="skills">
   <h2>Skills</h2>
   <ul class="entries">
     <li><span class="when">Experiment</span><span class="what">Electrochemical impedance spectroscopy, solid oxide cell testing,
@@ -333,18 +494,19 @@
   </ul>
 </section>
 
-<section>
+<section id="contact">
   <h2>Contact</h2>
   <p>
     <a href="mailto:hangyu.yu@outlook.com">hangyu.yu@outlook.com</a><br>
     Group of Energy Materials, EPFL Valais Wallis, Sion, Switzerland
   </p>
 </section>
+</main>
 
 <footer>
-  &copy; <span id="year">2026</span> Hangyu Yu
+  <p>&copy; <span id="year">2026</span> Hangyu Yu · EPFL</p>
+  <p>Layout inspired by <a href="https://github.com/Chasel-Tsui/Homepage">Chang Xu’s homepage</a>.</p>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-
 </body>
 </html>
