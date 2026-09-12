@@ -21,6 +21,14 @@ DOI titles, author lists and bibliographic information were checked through http
 - The 2026 dimethyl sulphide paper is registered with a December 2026 issue date. The page displays only the registered year and does not claim a specific online publication date.
 - The ES Energy & Environment DOI has sparse Crossref volume/page metadata. Volume 8 and pages 65–77 are retained from the original page.
 - Full names are from Crossref, with Hangyu Yu highlighted. Unexplained author asterisks from the old page are omitted; corresponding-author status was not established for every item.
+- Author roles are marked for Hangyu Yu only († co-first, * corresponding). Checked 2026-09-12 against the published author footnotes:
+  - Ma et al. 2024, Renewable Energy: † * ("These two authors contributed equally"; "Corresponding author"). Source: published PDF on EPFL Infoscience.
+  - Fronterotta et al. 2026, Cell Reports Physical Science: † * ("These authors contributed equally"; lead contact; "Correspondence"). Source: published PDF on EPFL Infoscience.
+  - Liang et al. 2026, J. Electrochem. Soc.: † ("= Equal Contribution" author note; correspondence email belongs to M. Han). Source: IOPscience article page.
+  - Pera et al. 2026, Journal of Power Sources: * ("Corresponding author", with Hangyu Yu's email). Source: published PDF on EPFL Infoscience.
+  - Yu et al. 2025, Applied Energy 397 (μ-CHP): * ("Corresponding author", with Hangyu Yu's email). Source: published CC BY PDF on EPFL Infoscience.
+  - No role for Hangyu Yu found on: Aubin 2025 (Infoscience PDF), Nature Communications 2026 (nature.com), ES Energy & Environment 2020 (publisher PDF), Springer 2023 chapter (link.springer.com), ECS Transactions 2023 and both ECS Meeting Abstracts 2025 (IOPscience, no author notes).
+  - Confirmed by the author (publisher page behind a captcha or blocked, no open copy found): no role to mark on Applied Energy 2026 (parametric study), Electrochimica Acta 2025, Journal of Power Sources 2025 and Energy Storage and Saving 2022 (sole first author), or on Journal of Cleaner Production 2023, Energy 2022, Applied Energy 2020, ACS AMI 2021 and the Encyclopedia chapter 2025. The author also confirmed the * on the 2025 μ-CHP Applied Energy paper.
 - Personal biography, employment and education are preserved from the user-provided page.
 - The profile uses the user-supplied docs/Photo.png. No research figures were supplied; publications use text entries.
 

@@ -17,19 +17,6 @@
     --tint: #edf3ff;
     --shadow: 0 2px 8px rgb(24 44 76 / 4%);
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      color-scheme: dark;
-      --bg: #121720;
-      --surface: #1b2330;
-      --fg: #ecf0f7;
-      --muted: #b0bbcd;
-      --rule: #354155;
-      --link: #9abcff;
-      --tint: #253654;
-      --shadow: none;
-    }
-  }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 88px; }
   body {
@@ -109,6 +96,8 @@
   .pub-title a:hover { color: var(--link); }
   .pub-authors { margin: 0 0 6px; color: var(--muted); font-size: 12px; line-height: 1.75; }
   .pub-authors strong { color: var(--fg); font-weight: 600; }
+  .pub-authors sup { color: var(--fg); font-size: 10px; margin-left: 1px; }
+  .author-legend { margin: -18px 0 22px; color: var(--muted); font-size: 12px; }
   .pub-venue { margin: 0 0 8px; color: var(--muted); font-size: 12px; font-style: italic; }
   .pub-note { margin: 0 0 9px; color: var(--muted); font-size: 12px; }
   .paper-link { display: inline-block; border: 1px solid var(--rule); background: var(--tint); padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 500; }
@@ -198,6 +187,7 @@
     <a href="#books">Book chapters <span>2</span></a>
     <a href="#conferences">Conferences <span>4</span></a>
   </nav>
+  <p class="author-legend">† Co-first author · * Corresponding author</p>
 
   <h3 id="journals" class="category-title">Journal articles <span>16</span></h3>
   <ol class="pubs">
@@ -205,7 +195,7 @@
       <span class="pub-year">2026</span>
       <div>
         <h4 class="pub-title"><a href="https://doi.org/10.1016/j.jpowsour.2026.241255">Dimethyl sulphide poisoning of a Ni-anode SOFC stack: concentration dependence and reversibility</a></h4>
-        <p class="pub-authors">Lucia Pera, Audrey Wesoly, Stefan Diethelm, Cédric Frantz, <strong>Hangyu Yu</strong>, Marta Gandiglio, Paolo Marocco, Massimo Santarelli, Jan Van Herle</p>
+        <p class="pub-authors">Lucia Pera, Audrey Wesoly, Stefan Diethelm, Cédric Frantz, <strong>Hangyu Yu</strong><sup>*</sup>, Marta Gandiglio, Paolo Marocco, Massimo Santarelli, Jan Van Herle</p>
         <p class="pub-venue">Journal of Power Sources 694, 241255 · 2026</p>
         <a class="paper-link" href="https://doi.org/10.1016/j.jpowsour.2026.241255">Paper <span aria-hidden="true">↗</span></a>
       </div>
@@ -214,7 +204,7 @@
       <span class="pub-year">2026</span>
       <div>
         <h4 class="pub-title"><a href="https://doi.org/10.1016/j.xcrp.2026.103490">Performance optimization of a solid oxide fuel cell system for long-term operation</a></h4>
-        <p class="pub-authors">Dante Fronterotta, <strong>Hangyu Yu</strong>, Florian Bernard Berset, Guillaume Jeanmonod, Chengzhou Li, Arne Sommerfeld, Gregor Holstermann, Massimo Santarelli, Ligang Wang, Grégory François, Jan Van Herle</p>
+        <p class="pub-authors">Dante Fronterotta, <strong>Hangyu Yu</strong><sup>†*</sup>, Florian Bernard Berset, Guillaume Jeanmonod, Chengzhou Li, Arne Sommerfeld, Gregor Holstermann, Massimo Santarelli, Ligang Wang, Grégory François, Jan Van Herle</p>
         <p class="pub-venue">Cell Reports Physical Science 7(8), 103490 · 2026</p>
         <a class="paper-link" href="https://doi.org/10.1016/j.xcrp.2026.103490">Paper <span aria-hidden="true">↗</span></a>
       </div>
@@ -232,7 +222,7 @@
       <span class="pub-year">2026</span>
       <div>
         <h4 class="pub-title"><a href="https://doi.org/10.1149/1945-7111/ae4f2b">Carbon Deposition Induced Short Circuit of YSZ Electrolyte in Solid Oxide CO₂ Electrolysis</a></h4>
-        <p class="pub-authors">Jingjing Liang, <strong>Hangyu Yu</strong>, Ye Huang, Minfang Han, Jan Van herle</p>
+        <p class="pub-authors">Jingjing Liang, <strong>Hangyu Yu</strong><sup>†</sup>, Ye Huang, Minfang Han, Jan Van herle</p>
         <p class="pub-venue">Journal of The Electrochemical Society 173(6), 064504 · 2026</p>
         <a class="paper-link" href="https://doi.org/10.1149/1945-7111/ae4f2b">Paper <span aria-hidden="true">↗</span></a>
       </div>
@@ -259,7 +249,7 @@
       <span class="pub-year">2025</span>
       <div>
         <h4 class="pub-title"><a href="https://doi.org/10.1016/j.apenergy.2025.126321">Performance assessment and fast diagnosis of a μ-CHP solid oxide fuel cell system</a></h4>
-        <p class="pub-authors"><strong>Hangyu Yu</strong>, Florian Bernard Berset, Pyry Mäkinen, Cédric Frantz, Philippe Aubin, Arne Sommerfeld, Gregor Holstermann, Tafarel de Avila Ferreira, Hamza Moussaoui, Guillaume Jeanmonod, Ligang Wang, Matthias Boltze, Grégory François, Jan Van herle</p>
+        <p class="pub-authors"><strong>Hangyu Yu</strong><sup>*</sup>, Florian Bernard Berset, Pyry Mäkinen, Cédric Frantz, Philippe Aubin, Arne Sommerfeld, Gregor Holstermann, Tafarel de Avila Ferreira, Hamza Moussaoui, Guillaume Jeanmonod, Ligang Wang, Matthias Boltze, Grégory François, Jan Van herle</p>
         <p class="pub-venue">Applied Energy 397, 126321 · 2025</p>
         <a class="paper-link" href="https://doi.org/10.1016/j.apenergy.2025.126321">Paper <span aria-hidden="true">↗</span></a>
       </div>
@@ -286,7 +276,7 @@
       <span class="pub-year">2024</span>
       <div>
         <h4 class="pub-title"><a href="https://doi.org/10.1016/j.renene.2024.121302">Techno-economic evaluation of biogas-fed SOFC systems with novel biogas purification and carbon capture technologies</a></h4>
-        <p class="pub-authors">Chun Ma, <strong>Hangyu Yu</strong>, Gianluca Monticone, Shuai Ma, Jan Van herle, Ligang Wang</p>
+        <p class="pub-authors">Chun Ma, <strong>Hangyu Yu</strong><sup>†*</sup>, Gianluca Monticone, Shuai Ma, Jan Van herle, Ligang Wang</p>
         <p class="pub-venue">Renewable Energy 235, 121302 · 2024</p>
         <a class="paper-link" href="https://doi.org/10.1016/j.renene.2024.121302">Paper <span aria-hidden="true">↗</span></a>
       </div>
