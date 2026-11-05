@@ -4,7 +4,7 @@ Checked: 2026-11-05.
 
 ## Scope and classification
 
-The original index.html contained 12 journal articles, 2 book chapters and 4 conference/talk records. The refreshed page includes all of them and 4 additional 2026 journal articles identified in the author's public ORCID record. The 2026-11-05 update added 4 journal articles and 5 conference entries from the author's CV sources. The page now lists 20 journal articles, 2 book chapters and 9 conference entries.
+The original index.html contained 12 journal articles, 2 book chapters and 4 conference/talk records. The refreshed page includes all of them and 4 additional 2026 journal articles identified in the author's public ORCID record. The 2026-11-05 update added 4 journal articles and 5 conference entries from the author's CV sources. A further check of the author's conference folders added more entries, so the page now lists 20 journal articles, 2 book chapters and 28 conference entries.
 
 Author identity: https://orcid.org/0000-0003-0856-0320
 Public works API: https://pub.orcid.org/v3.0/0000-0003-0856-0320/works
@@ -13,7 +13,9 @@ DOI titles, author lists and bibliographic information were checked through http
 
 ## Editorial decisions
 
-- Oral and poster labels on all conference entries were supplied by the author on 2026-11-05: 5 oral presentations and 4 posters.
+- Conference entries total 9 oral presentations and 19 posters. Labels for EFCF 2026 B1502, SOFC-XIX 2025, EFCF 2024 B1302 and SOFC-XVIII 2023 were supplied by the author. EFCF labels otherwise follow the official programme (main schedule or poster list), and ModVal 2025 and 2026 follow the official programme.
+- Inferred labels: EUBCE 2023 is labelled oral from a 14-slide talk in the author's project folder, and ModVal 2023 is labelled poster from a poster folder in the author's project files. The official sources do not state the format.
+- ModVal 2025 (S. Zhao, hythane-fueled SOFC) is not listed: the submitted abstract names Hangyu Yu, but the published Book of Abstracts does not.
 - The citation count (516) and the total of 12 first, co-first or corresponding papers were supplied by the author on 2026-11-05. The 12 reconcile as 7 first-author papers, 4 further corresponding-author papers (Fronterotta 2026, both Pera 2026, Ma 2024) and 1 co-first paper (Liang 2026). The last step is an inference from the page's author roles.
 - Project participation is taken from the author's CV. Budgets are omitted because the CV mixes project totals and institutional shares.
 - ECS Meeting Abstracts (2025) are labelled Abstract, and the ECS Transactions contribution (2023) is placed under Conferences. Crossref's generic journal-article type does not make these regular journal papers.
@@ -81,3 +83,9 @@ EFCF 2026: title and authors supplied by the author. Dates and venue from https:
 EFCF 2024 (Frantz et al.): https://zenodo.org/records/13256257
 
 SOFC-XIX 2025 (Daviran et al.): no DOI verified. Authors after A. Schueler were not available in the source record.
+
+EFCF 2026, 2024 and 2022 programmes and the ModVal 2023 and 2025 books of abstracts were read from the author's local conference archive on 2026-11-05.
+
+EFCF 2022: https://zenodo.org/records/13256296
+
+EUBCE 2023: https://zenodo.org/records/13256346
