@@ -1,10 +1,10 @@
 # Publication sources
 
-Checked: 2026-09-12.
+Checked: 2026-11-05.
 
 ## Scope and classification
 
-The original index.html contained 12 journal articles, 2 book chapters and 4 conference/talk records. The refreshed page includes all of them and 4 additional 2026 journal articles identified in the author's public ORCID record. It therefore lists 16 journal articles, 2 book chapters and 4 conference entries.
+The original index.html contained 12 journal articles, 2 book chapters and 4 conference/talk records. The refreshed page includes all of them and 4 additional 2026 journal articles identified in the author's public ORCID record. The 2026-11-05 update added 4 journal articles and 5 conference entries from the author's CV sources. The page now lists 20 journal articles, 2 book chapters and 9 conference entries.
 
 Author identity: https://orcid.org/0000-0003-0856-0320
 Public works API: https://pub.orcid.org/v3.0/0000-0003-0856-0320/works
@@ -13,8 +13,11 @@ DOI titles, author lists and bibliographic information were checked through http
 
 ## Editorial decisions
 
+- Oral and poster labels on all conference entries were supplied by the author on 2026-11-05: 5 oral presentations and 4 posters.
+- The citation count (516) and the total of 12 first, co-first or corresponding papers were supplied by the author on 2026-11-05. The 12 reconcile as 7 first-author papers, 4 further corresponding-author papers (Fronterotta 2026, both Pera 2026, Ma 2024) and 1 co-first paper (Liang 2026). The last step is an inference from the page's author roles.
+- Project participation is taken from the author's CV. Budgets are omitted because the CV mixes project totals and institutional shares.
 - ECS Meeting Abstracts (2025) are labelled Abstract, and the ECS Transactions contribution (2023) is placed under Conferences. Crossref's generic journal-article type does not make these regular journal papers.
-- EFCF 2024 is labelled Conference presentation, linked to the official programme, entry B1302. No DOI or full proceedings paper was verified.
+- EFCF 2024 is labelled Oral presentation (author, 2026-11-05), linked to the official programme, entry B1302. No DOI or full proceedings paper was verified.
 - The duplicate SSRN preprint of the 2026 dimethyl sulphide paper is not listed as a separate publication.
 - Nature Communications is now 17, 2421 (2026), confirmed at https://www.nature.com/articles/s41467-026-69110-y.
 - The 2025 book chapter has 2024 in one ORCID record and 2025 in Crossref; the page retains 2025, matching Crossref and the original page.
@@ -28,7 +31,8 @@ DOI titles, author lists and bibliographic information were checked through http
   - Pera et al. 2026, Journal of Power Sources: * ("Corresponding author", with Hangyu Yu's email). Source: published PDF on EPFL Infoscience.
   - Yu et al. 2025, Applied Energy 397 (μ-CHP): * ("Corresponding author", with Hangyu Yu's email). Source: published CC BY PDF on EPFL Infoscience.
   - No role for Hangyu Yu found on: Aubin 2025 (Infoscience PDF), Nature Communications 2026 (nature.com), ES Energy & Environment 2020 (publisher PDF), Springer 2023 chapter (link.springer.com), ECS Transactions 2023 and both ECS Meeting Abstracts 2025 (IOPscience, no author notes).
-  - Confirmed by the author (publisher page behind a captcha or blocked, no open copy found): no role to mark on Applied Energy 2026 (parametric study), Electrochimica Acta 2025, Journal of Power Sources 2025 and Energy Storage and Saving 2022 (sole first author), or on Journal of Cleaner Production 2023, Energy 2022, Applied Energy 2020, ACS AMI 2021 and the Encyclopedia chapter 2025. The author also confirmed the * on the 2025 μ-CHP Applied Energy paper.
+  - Confirmed by the author (publisher page behind a captcha or blocked, no open copy found): no role to mark on Electrochimica Acta 2025, Journal of Power Sources 2025 and Energy Storage and Saving 2022 (sole first author), or on Journal of Cleaner Production 2023, Energy 2022, Applied Energy 2020, ACS AMI 2021 and the Encyclopedia chapter 2025. The author also confirmed the * on the 2025 μ-CHP Applied Energy paper.
+  - Stated by the author on 2026-11-05, not checked against the published footnotes: * on ACS Omega 2026, Electrochimica Acta 2026 and Applied Energy 2026 (parametric study). The last replaces the earlier no-role record of 2026-09-12.
 - Personal biography, employment and education are preserved from the user-provided page.
 - The profile uses the user-supplied docs/Photo.png. No research figures were supplied; publications use text entries.
 
@@ -36,6 +40,11 @@ DOI titles, author lists and bibliographic information were checked through http
 
 | Category | Year | Title | DOI |
 | --- | --- | --- | --- |
+| Journal | 2026 | Optimal and Secure Operation of a μ-CHP Solid Oxide Fuel Cell System | https://doi.org/10.1021/acsomega.6c08789 |
+| Journal | 2026 | Diagnosis of reactant starvation in reversible solid-oxide cells: Cell-dependent responses of total harmonic distortion | https://doi.org/10.1016/j.energy.2026.142812 |
+| Journal | 2026 | Electrochemical performance and degradation behaviour of Ni–YSZ anode-supported SOFC operated with pre-processed biogas | https://doi.org/10.1016/j.electacta.2026.148838 |
+| Journal | 2026 | Temperature-dependent electrochemical process decoupling in PEM water electrolysis: DRT deconvolution and Arrhenius-based modeling | https://doi.org/10.1016/j.apenergy.2026.127351 |
+| Conference | 2025 | Accelerated Life Test Protocol Development for Solid Oxide Fuel Cells Using a Design of Experiment Methodology | https://doi.org/10.1149/ma2025-031296mtgabs |
 | Journal | 2026 | Performance optimization of a solid oxide fuel cell system for long-term operation | https://doi.org/10.1016/j.xcrp.2026.103490 |
 | Journal | 2026 | Parametric study of Ni-GDC based electrolyte-supported cell via electrochemical impedance spectroscopy | https://doi.org/10.1016/j.apenergy.2026.127941 |
 | Journal | 2026 | Carbon Deposition Induced Short Circuit of YSZ Electrolyte in Solid Oxide CO₂ Electrolysis | https://doi.org/10.1149/1945-7111/ae4f2b |
@@ -64,3 +73,11 @@ https://www.efcf.com/fileadmin/user_upload/EFCF-2024_16th_SOFC-SOE-Forum_2024_2-
 
 Title: Characterization and modelling of SOFC degradation via accelerated life test and design of experiments method (B1302).
 Authors: Guillaume Jeanmonod, Hangyu Yu, Marie-Lise Tremblay, Cédric Frantz, Jean-François Labrecque, Sylvio Savoie, Jan Van herle.
+
+ModVal 2026 (programme entry B101, authors from the abstract): https://modval2026.epfl.ch/wp-content/uploads/2026/03/ModVal2026_Proceedings.pdf
+
+EFCF 2026: title and authors supplied by the author. Dates and venue from https://pure.unileoben.ac.at/en/activities/17th-european-sofc-amp-soe-forum/
+
+EFCF 2024 (Frantz et al.): https://zenodo.org/records/13256257
+
+SOFC-XIX 2025 (Daviran et al.): no DOI verified. Authors after A. Schueler were not available in the source record.
