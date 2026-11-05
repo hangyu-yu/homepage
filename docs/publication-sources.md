@@ -17,7 +17,6 @@ DOI titles, author lists and bibliographic information were checked through http
 - Inferred labels: EUBCE 2023 is labelled oral from a 14-slide talk in the author's project folder, and ModVal 2023 is labelled poster from a poster folder in the author's project files. The official sources do not state the format.
 - ModVal 2025 (S. Zhao, hythane-fueled SOFC) is not listed: the submitted abstract names Hangyu Yu, but the published Book of Abstracts does not.
 - The citation count (516) and the total of 12 first, co-first or corresponding papers were supplied by the author on 2026-11-05. The 12 reconcile as 7 first-author papers, 4 further corresponding-author papers (Fronterotta 2026, both Pera 2026, Ma 2024) and 1 co-first paper (Liang 2026). The last step is an inference from the page's author roles.
-- Project participation is taken from the author's CV. Budgets are omitted because the CV mixes project totals and institutional shares.
 - ECS Meeting Abstracts (2025) are labelled Abstract, and the ECS Transactions contribution (2023) is placed under Conferences. Crossref's generic journal-article type does not make these regular journal papers.
 - EFCF 2024 is labelled Oral presentation (author, 2026-11-05), linked to the official programme, entry B1302. No DOI or full proceedings paper was verified.
 - The duplicate SSRN preprint of the 2026 dimethyl sulphide paper is not listed as a separate publication.
